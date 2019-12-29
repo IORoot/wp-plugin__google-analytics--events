@@ -13,12 +13,12 @@ function analytics_goal_hit($email, $reservation){
         // IF Discount used, use price discount price.
         $price = $reservation->getPrice();
 
+        // create now object
+        $GA = new send_analytics();
+
         if($reservation->getDiscount()){
 
             $price = $reservation->getPriceDiscounted();
-
-            // create now object
-            $GA = new send_analytics();
 
             // Send the 'coupon used' event.
             $GA->send_analytics_event(
