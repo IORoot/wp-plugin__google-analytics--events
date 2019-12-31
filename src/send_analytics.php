@@ -9,6 +9,15 @@ class send_analytics {
     //  │                                                                         │░
     //  └─────────────────────────────────────────────────────────────────────────┘░
     //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+    /**
+     * send_analytics_event
+     *
+     * @param mixed $category
+     * @param mixed $action
+     * @param mixed $label
+     * @param mixed $value
+     * @return void
+     */
     public function send_analytics_event($category = 'unassigned', $action = 'unassigned', $label = 'unassigned', $value = 1){
 
         $data = array(
