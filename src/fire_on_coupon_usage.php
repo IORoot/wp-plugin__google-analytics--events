@@ -6,9 +6,12 @@
 //  │                                                                         │░
 //  └─────────────────────────────────────────────────────────────────────────┘░
 //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                          
-add_action('tbk_reservation_email_to_customer', 'analytics_goal_hit_class_booking', 10, 2);
+add_action('tbk_reservation_email_to_customer', 'analytics_goal_hit_coupon_used', 10, 2);
 
-function analytics_goal_hit_class_booking($email, $reservation){
+function analytics_goal_hit_coupon_used($email, $reservation){
+
+    // Check If there is a discount coupon being used first.
+    if($reservation->getDiscount()){
 
         // create new object
         $GA = new send_analytics();
@@ -16,17 +19,19 @@ function analytics_goal_hit_class_booking($email, $reservation){
         /**
          * Fire an analytics event
          * 
-         * Category = 'cclass booking'
+         * Category = 'coupon used'
          * Action = 'Beginner Class'
          * Label = 'A Person'
-         * Value = 10
+         * Value = 1
          */
         $GA->send_analytics_event(
-            'class booking',
+            'coupon used',
             $reservation->getServiceName(),
             $reservation->getCustomerDisplayName(),
-            $reservation->getPrice()
+            1
         );
+
+    }
 
     return;
 }

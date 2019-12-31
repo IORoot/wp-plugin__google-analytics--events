@@ -27,3 +27,4 @@ require __DIR__.'/src/send_analytics.php';
 //  │                   The events that will fire a GA hit                    │
 //  └─────────────────────────────────────────────────────────────────────────┘
 require __DIR__.'/src/fire_on_class_purchase.php';
+require __DIR__.'/src/fire_on_coupon_usage.php';
