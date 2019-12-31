@@ -18,7 +18,7 @@ class send_analytics {
      * @param mixed $value
      * @return void
      */
-    public function send_analytics_event($category = 'unassigned', $action = 'unassigned', $label = 'unassigned', $value = 1){
+    public function send_analytics_event($category = "", $action = "", $label = "", $value = 1){
 
         $data = array(
             'v' => 1,                           // VERSION
