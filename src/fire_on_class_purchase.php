@@ -22,7 +22,7 @@ function analytics_goal_hit($email, $reservation){
 
             // Send the 'coupon used' event.
             $GA->send_analytics_event(
-                'coupon_used',
+                'coupon used',
                 $reservation->getServiceName(),
                 $reservation->getCustomerDisplayName(),
                 1
@@ -32,7 +32,7 @@ function analytics_goal_hit($email, $reservation){
 
         // Send a 'class booking' event.
         $GA->send_analytics_event(
-            'class_booking',
+            'class booking',
             $reservation->getServiceName(),
             $reservation->getCustomerDisplayName(),
             $price
