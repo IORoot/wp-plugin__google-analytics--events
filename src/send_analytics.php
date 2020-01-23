@@ -2,6 +2,12 @@
 
 class send_analytics {
 
+    public $version = 1;
+
+    public $urchin = 'UA-116670575-1';
+
+    public $event = 'event';
+
     //  ┌─────────────────────────────────────────────────────────────────────────┐ 
     //  │                                                                         │░
     //  │                     Send event to Google Analytics                      │░
@@ -11,6 +17,8 @@ class send_analytics {
     /**
      * send_analytics_event
      *
+     * Note: Make sure the 'value' is a round number. Google Analytics doesn't like decimal places.
+     * 
      * @param mixed $category
      * @param mixed $action
      * @param mixed $label
@@ -20,10 +28,10 @@ class send_analytics {
     public function send_analytics_event($category = "", $action = "", $label = "", $value = 1){
 
         $data = array(
-            'v' => 1,                           // VERSION
-            'tid' => 'UA-116670575-1',          // URCHIN
-            'cid' => $this->gen_uuid(),         // RANDOM
-            't' => 'event'                      // EVENT
+            'v' => $this->version,      // VERSION
+            'tid' => $this->urchin,     // URCHIN
+            'cid' => $this->gen_uuid(), // RANDOM
+            't' => $this->event         // EVENT
         );
     
         $data['ec'] = $category;

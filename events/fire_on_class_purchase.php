@@ -5,7 +5,8 @@
 //  │       Fire an event when a customer makes a purchase of a class.        │░
 //  │                                                                         │░
 //  └─────────────────────────────────────────────────────────────────────────┘░
-//   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░                                                                          
+//   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
 add_action('tbk_reservation_email_to_customer', 'analytics_goal_hit_class_booking', 10, 2);
 
 function analytics_goal_hit_class_booking($email, $reservation){

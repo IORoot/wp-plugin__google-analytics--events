@@ -1,4 +1,4 @@
-# wp-plugin__teambooking--GA
+# wp-plugin__google-analytics--fire-events
 Teambooking wordpress plugin customisation to fire a Google Analytics event.
 
 ## How it works
