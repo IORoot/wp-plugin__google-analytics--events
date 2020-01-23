@@ -11,7 +11,9 @@ add_action('tbk_reservation_email_to_customer', 'analytics_goal_hit_coupon_used'
 
 function analytics_goal_hit_coupon_used($email, $reservation){
 
-    // Check If there is a discount coupon being used first.
+    //  ┌──────────────────────────────────────────────────────────┐
+    //  │               ONLY when a discount is used               │
+    //  └──────────────────────────────────────────────────────────┘
     if($reservation->getDiscount()){
 
         // create new object

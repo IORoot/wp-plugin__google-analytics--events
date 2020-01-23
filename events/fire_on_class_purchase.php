@@ -4,6 +4,8 @@
 //  │                                                                         │░
 //  │       Fire an event when a customer makes a purchase of a class.        │░
 //  │                                                                         │░
+//  │                  Requires TEAMBOOKING for this action.                  │░
+//  │                                                                         │░
 //  └─────────────────────────────────────────────────────────────────────────┘░
 //   ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 
@@ -17,7 +19,7 @@ function analytics_goal_hit_class_booking($email, $reservation){
         /**
          * Fire an analytics event
          * 
-         * Category = 'cclass booking'
+         * Category = 'class booking'
          * Action = 'Beginner Class'
          * Label = 'A Person'
          * Value = 10
