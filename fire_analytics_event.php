@@ -1,9 +1,9 @@
 <?php
 
 /*
-Plugin Name: _ANDYP - Google Analytics - Fire events
+Plugin Name: _ANDYP - TeamBooking - Google Analytics - Fire on reservation_email
 Plugin URI: https://londonparkour.com
-Description: Custom Google Analytics firing.
+Description: <strong>💪ACTION</strong> | <em>tbk_reservation_email_to_customer / tbk_reservation_email_to_admin</em> | Custom Google Analytics firing.
 Version: 2.0.0
 Author: Andy Pearson
 Author URI: https://londonparkour.com
